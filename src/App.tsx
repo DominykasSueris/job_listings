@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import jobService from "./services/services";
+import JobOffer from "./utils/jobOffer";
+import JobList from "./components/jobList";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [jobOffer, setJobOffer] = useState<JobOffer[]>([]);
+
+  useEffect(() => {
+    loadJobs();
+  }, []);
+
+  const loadJobs = async () => {
+    const jobs = await jobService.getJobs();
+    setJobOffer(jobs);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <JobList jobOffer={jobOffer} />
     </div>
   );
-}
+};
 
 export default App;
