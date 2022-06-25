@@ -1,4 +1,5 @@
 import JobOffer from "../utils/jobOffer";
+import "../App.scss";
 
 interface JobListProps {
   jobOffer: JobOffer[];
@@ -8,20 +9,34 @@ function JobList({ jobOffer }: JobListProps) {
   return (
     <div>
       {jobOffer.map(job => (
-        <ul key={job.id}>
-          <li>{job.company}</li>
-          <li>{job.logo}</li>
-          <li>{job.new}</li>
-          <li>{job.featured}</li>
-          <li>{job.position}</li>
-          <li>{job.role}</li>
-          <li>{job.level}</li>
-          <li>{job.postedAt}</li>
-          <li>{job.contract}</li>
-          <li>{job.location}</li>
-          <li>{job.languages}</li>
-          <li>{job.tools}</li>
-        </ul>
+        <div className="card">
+          <ul className="list" key={job.id}>
+            <span className="first-span">
+              <li>{job.logo}</li>
+              <li>{job.company}</li>
+              <li>{job.new}</li>
+              <li>{job.position}</li>
+              <li>{job.featured}</li>
+              <li>{job.postedAt}</li>
+              <li>{job.contract}</li>
+              <li>{job.location}</li>
+            </span>
+            <span className="second-span">
+              <li>
+                <button>{job.role}</button>
+              </li>
+              <li>
+                <button>{job.level}</button>
+              </li>
+              <li>
+                <button>{job.languages}</button>
+              </li>
+              <li>
+                <button>{job.tools}</button>
+              </li>
+            </span>
+          </ul>
+        </div>
       ))}
     </div>
   );

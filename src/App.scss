@@ -1,9 +1,43 @@
 * {
   font-family: "League Spartan", sans-serif, "Roboto";
   font-weight: 500;
+}
+
+body {
   background-color: hsl(180, 52%, 96%);
 }
 
 .navbar {
   height: 140px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  list-style: none;
+}
+
+.first-span {
+  width: 50%;
+}
+
+.second-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.second-span button {
+  width: 96px;
+  height: 36px;
+  margin: 0 6px;
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 14%, 20%);
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
 }
