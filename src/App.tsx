@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import { NavBar } from "./components/navbar";
 import jobService from "./services/services";
 import JobOffer from "./utils/jobOffer";
 import JobList from "./components/jobList";
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   const [jobOffer, setJobOffer] = useState<JobOffer[]>([]);
@@ -17,6 +18,7 @@ const App = () => {
   };
   return (
     <div className="App">
+      <NavBar />
       <JobList jobOffer={jobOffer} />
     </div>
   );
