@@ -40,25 +40,27 @@ body {
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: grid;
+  grid-template-rows: 24px auto 24px;
+  align-items: center;
+  row-gap: 0.5px;
+  margin-left: 36px;
 }
 
 .top-info {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .center-info {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   font-size: 26px;
 }
 
 .bottom-info {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .second-span button {
