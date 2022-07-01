@@ -1,6 +1,7 @@
 * {
   font-family: "League Spartan", sans-serif, "Roboto";
   font-weight: 500;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 }
 
 .main-div {
-  margin-top: 72px;
+  margin: 72px 36px 0;
 }
 
 .list {
