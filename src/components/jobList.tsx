@@ -7,7 +7,7 @@ interface JobListProps {
 
 function JobList({ jobOffer }: JobListProps) {
   return (
-    <div>
+    <div className="main-div">
       {jobOffer.map(job => (
         <div className="card">
           <ul className="list" key={job.id}>
